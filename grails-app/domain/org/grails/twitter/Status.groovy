@@ -9,7 +9,7 @@ class Status {
     Date dateCreated
     
     static constraints = {
-        message:{blank:false}
+        message blank:false
         message size: 2..141    
     }
     

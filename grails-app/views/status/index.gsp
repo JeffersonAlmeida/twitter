@@ -6,12 +6,12 @@
 </head>
 <body>
   
-     <!-- <h1>Search For People To Follow</h1>
+     <h1>Search For People To Follow</h1>
     <div class="searchForm">
         <g:form controller="searchable">
             <g:textField name="q" value=""/>
         </g:form>
-    </div> -->
+    </div> 
 
    
     <h1>What are you doing <sec:username/> ?<br/><br/></h1>

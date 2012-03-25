@@ -11,7 +11,10 @@ class Person {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
-
+        
+        static hasMany = [followed: Person]
+        static searchable =  [only:'realName']
+    
 	static constraints = {
 		username blank: false, unique: true
 		password blank: false

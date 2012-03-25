@@ -20,6 +20,9 @@ class StatusController {
            render template: 'messages', collection: messages, var: 'statusMessage'
      }
     
+    def follow(){
+        print "Follow"
+    }
    
     private currentUserTimeline(){
         def menssages =  msgs()      
