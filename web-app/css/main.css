@@ -583,3 +583,11 @@ a.skip {
 	position: absolute;
 	left: -9999px;
 }
+
+.statusMessage{
+    padding:10px;
+    width:300px; 
+}
+.statusMessageTime{
+    color:grey;
+}
