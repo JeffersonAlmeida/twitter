@@ -591,3 +591,7 @@ a.skip {
 .statusMessageTime{
     color:grey;
 }
+
+.pageBody{
+    padding: 50px 50px 50px 280px
+}
