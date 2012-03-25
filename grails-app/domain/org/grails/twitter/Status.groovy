@@ -8,5 +8,9 @@ class Status {
     String author
     Date dateCreated
     
+    static constraints = {
+        message:{blank:false}
+        message size: 2..141    
+    }
     
 }
