@@ -22,6 +22,13 @@ class StatusController {
     
     def follow(){
         print "Follow"
+        def per = Person.get(params.id)
+        if(per){
+            def currentUser = lookUpPerson()
+            currentUser.addToFollowed(per)
+            currentUser.save()
+        }
+        redirect action: 'index'
     }
    
     private currentUserTimeline(){
@@ -35,8 +42,14 @@ class StatusController {
     
     def private msgs(){
         def s = Status.createCriteria()
+        def per = lookUpPerson()
         def menssages = s{
-            eq("author","$springSecurityService.principal.username")
+            or{
+                eq("author","$springSecurityService.principal.username")
+                if(per.followed){
+                    inList 'author', per.followed.username
+                }
+            }
             maxResults(10)
             order("dateCreated", "desc")
         }  
